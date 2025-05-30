@@ -1,0 +1,335 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.shopper-form {
+    background-color: #fff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.shopper-form select {
+    width: 100% !important;
+    padding: 10px !important;
+    margin: 10px 0 !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+}
+
+.shopper-form button {
+    background: linear-gradient(90deg, #003366, #006699) !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 15px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    transition: background 0.3s !important;
+}
+
+.shopper-form button:hover {
+    background: linear-gradient(90deg, #006699, #003366) !important;
+}
+
+.product-image {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 4px !important;
+}
+
+.analytics-data {
+    margin-top: 20px !important;
+    padding: 10px !important;
+    background-color: #e7f3fe !important;
+    border-left: 6px solid #2196F3 !important;
+}
+
+.alx-shopper-error {
+    color: #c00 !important;
+    font-weight: bold !important;
+    margin: 20px 0 !important;
+    text-align: center !important;
+}
+
+/* Pure CSS spinner */
+.alx-shopper-spinner {
+    display: none;
+    position: fixed !important;
+    z-index: 9999 !important;
+    left: 50% !important;
+    top: 50% !important;
+    width: 48px !important;
+    height: 48px !important;
+    transform: translate(-50%, -50%) !important;
+}
+.alx-shopper-spinner:after {
+    content: " ";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    border-radius: 50%;
+    border: 4px solid #006699;
+    border-color: #006699 transparent #003366 transparent;
+    animation: alx-spinner 1.2s linear infinite;
+}
+@keyframes alx-spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+body .alx-shopper-results {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 24px !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    padding: 0 !important;
+}
+
+/* --- Modern Card Style --- */
+body .alx-shopper-product,
+body .alx-product {
+    background: rgba(255,255,255,0.13) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 24px rgba(31,38,135,0.10) !important;
+    padding: 22px 16px 18px 16px !important;
+    text-align: center !important;
+    transition: box-shadow 0.22s, transform 0.18s !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    color: #222330 !important;
+    border: 1.5px solid rgba(255,255,255,0.18) !important;
+    backdrop-filter: blur(6px) !important;
+}
+
+body .alx-shopper-product:hover,
+body .alx-product:hover {
+    box-shadow: 0 8px 32px rgba(31,38,135,0.18) !important;
+    transform: translateY(-4px) scale(1.025) !important;
+}
+
+body .alx-shopper-product img,
+body .alx-product img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 10px !important;
+    margin-bottom: 14px !important;
+    /* box-shadow: 0 2px 12px rgba(31,38,135,0.07) !important; */
+    background: transparent !important;
+}
+
+body .alx-shopper-product h3,
+body .alx-product h3 {
+    font-size: 1.15rem !important;
+    margin: 0 0 8px 0 !important;
+    color: #1e225a !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.3px !important;
+}
+
+body .alx-shopper-price {
+    margin: 10px 0 8px 0 !important;
+    font-size: 1.1em !important;
+    color: #2196F3 !important;
+    font-weight: bold !important;
+    letter-spacing: 0.2px !important;
+}
+
+/* --- Unified Button Styles --- */
+.alx-shopper-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.alx-shopper-actions .quick-view,
+.alx-shopper-actions .view-product {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    padding: 12px 0 !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+    font-size: 1em !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    transition: background 0.22s, color 0.18s, box-shadow 0.18s !important;
+    margin: 0 !important;
+    background: linear-gradient(90deg, #003366 0%, #2196f3 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(31,38,135,0.08) !important;
+    letter-spacing: 0.2px !important;
+}
+
+.alx-shopper-actions .view-product {
+    background: linear-gradient(90deg, #ff9800 0%, #ffb347 100%) !important;
+    color: #fff !important;
+}
+
+.alx-shopper-actions .quick-view:hover,
+.alx-shopper-actions .view-product:hover {
+    background: linear-gradient(90deg, #222 0%, #444 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 16px rgba(31,38,135,0.16) !important;
+}
+
+/* Force .view-product links to look like buttons */
+.alx-shopper-actions a.view-product {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    padding: 12px 0 !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+    font-size: 1em !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+    background: linear-gradient(90deg, #ff9800 0%, #ffb347 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(31,38,135,0.08) !important;
+    letter-spacing: 0.2px !important;
+    transition: background 0.22s, color 0.18s, box-shadow 0.18s !important;
+    margin: 0 !important;
+}
+
+.alx-shopper-actions a.view-product:hover {
+    background: linear-gradient(90deg, #222 0%, #444 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 16px rgba(31,38,135,0.16) !important;
+}
+
+/* --- Quick View Modal Overlay --- */
+#alx-quick-view-modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(24, 24, 26, 0.806);
+    backdrop-filter: blur(2px);
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+/* --- Modal Box --- */
+.alx-quick-view-content {
+    background: rgba(255,255,255,0.18); /* glassy white */
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.18);
+    border-radius: 18px;
+    max-width: 420px;
+    width: 92%;
+    margin: 60px auto;
+    padding: 36px 28px 28px 28px;
+    position: relative;
+    text-align: center;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    animation: alxModalIn 0.22s cubic-bezier(.4,2,.6,1) 1;
+    overflow: hidden;
+}
+
+/* Make text and price stand out on dark */
+.alx-quick-view-body h2 {
+    color: #1e225a;
+    text-shadow: 0 2px 8px rgba(255,255,255,0.18);
+}
+.alx-quick-view-body .alx-shopper-price {
+    color: #2196F3;
+    text-shadow: 0 2px 8px rgba(255,255,255,0.18);
+}
+
+/* --- Close Button --- */
+.alx-quick-view-close {
+    position: absolute;
+    top: 14px; right: 18px;
+    font-size: 30px;
+    background: rgba(255,255,255,0.5);
+    border: none;
+    color: #444;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    transition: background 0.18s, color 0.18s;
+    box-shadow: 0 2px 8px rgba(31,38,135,0.08);
+}
+.alx-quick-view-close:hover {
+    background: #e74c3c;
+    color: #fff;
+}
+
+/* --- Modal Content --- */
+.alx-quick-view-body h2 {
+    font-size: 1.5em;
+    margin-bottom: 18px;
+    color: #222330;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(46, 48, 73, 0.08);
+}
+.alx-quick-view-body img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 18px rgba(31,38,135,0.10);
+    background: none !important;
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+    .alx-quick-view-content {
+        padding: 18px 6vw 18px 6vw;
+    }
+    .alx-quick-view-close {
+        top: 8px; right: 8px;
+        width: 32px; height: 32px; font-size: 22px; line-height: 32px;
+    }
+}
+
+#alx-shopper-results-overlay {
+    position: fixed;
+    z-index: 99998;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(24, 24, 26, 0.82);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+#alx-shopper-results-overlay .alx-shopper-results {
+    max-width: 1100px;
+    width: 92vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: rgba(255,255,255,0.18);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.18);
+    padding: 36px 28px 28px 28px;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 24px !important;
+    margin: 0 !important;
+}
